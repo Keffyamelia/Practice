@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.link-heading {
+  display: flex;
+  background-color: #ff2c2c;
+  padding: 10px;
+}
+
+.sub-heading {
+  padding: 20px;
+  margin: 10px;
+}
+.heading {
+  display: flex;
+  padding: 20px;
+  padding-right: 10px;
+}
+
+.banner {
+  width: 85%;
+}
+
+.align{
+    text-align: center;
+    color: #ff2c2c;
+}
+
+

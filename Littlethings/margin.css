@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+}
+#box1{
+    border: 5px solid;
+    width: 250px;
+    height: 250px;
+    font-size: 22px;
+    background: goldenrod;
+    overflow: hidden;
+}
+#box2{
+    border: 5px solid;
+    width: 250px;
+    height: 250px;
+    font-size: 22px;
+    background: greenyellow;
+    overflow: hidden;
+}

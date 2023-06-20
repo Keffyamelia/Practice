@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stopwatch</title>
+    <!-- <link rel="stylesheet" href="stopwatch.css" /> -->
+  </head>
+  <body>
+    <div class="stopwatch">
+      <div class="stopwatch__timer">
+        <span id="hours">00:</span>
+
+        <span></span>
+
+        <span id="minutes">00:</span>
+
+        <span id="seconds">00:</span>
+
+        <span id="milliseconds">00</span>
+      </div>
+
+      <div class="buttons">
+        <button class="stopwatch__button" id="start" type="button">
+          START
+        </button>
+
+        <button class="stopwatch__button" id="stop" type="button">STOP</button>
+
+        <button class="stopwatch__button" id="reset" type="button">
+          RESET
+        </button>
+      </div>
+    </div>
+
+    <script>
+      let milliseconds = 0;
+      let seconds = 0;
+      let minutes = 0;
+      let hours = 0;
+
+      let millisecond = document.getElementById("milliseconds");
+      let second = document.getElementById("seconds");
+      let minute = document.getElementById("minutes");
+      let hour = document.getElementById("hours");
+
+      let startButton = document.getElementById("start");
+      let stopButton = document.getElementById("stop");
+      let resetButton = document.getElementById("reset");
+
+      startButton.addEventListener("click", function () {
+        timer = true;
+        stopWatch();
+      });
+
+      stopButton.addEventListener("click", function () {
+        timer = false;
+      });
+
+      resetButton.addEventListener("click", function () {
+        timer = false;
+        milliseconds = 0;
+        seconds = 0;
+        minutes = 0;
+        hours = 0;
+        //document.getElementById("milliseconds").innerHTML = "00";
+        //document.getElementById("seconds").innerHTML = "00";
+        //document.getElementById("minutes").innerHTML = "00";
+        //document.getElementById("hours").innerHTML = "00";
+      });
+
+      function stopWatch() {
+        if (timer) {
+          milliseconds++;
+
+          if (milliseconds === 100) {
+            seconds++;
+            milliseconds = 0;
+          }
+
+          if (second === 60) {
+            minutes++;
+            seconds = 0;
+          }
+
+          if (minutes === 60) {
+            hours++;
+            minutes = 0;
+            seconds = 0;
+          }
+
+          let hourString = hour;
+          let minuteString = minute;
+          let secondString = second;
+          let millisecondString = millisecond;
+
+          if (hour < 10) {
+            hourString = "0" + hourString;
+          }
+
+          if (minute < 10) {
+            minuteString = "0" + minuteString;
+          }
+
+          if (second < 10) {
+            secondString = "0" + secondString;
+          }
+
+          if (millisecond < 10) {
+            millisecondString = "0" + millisecondString;
+          }
+
+          document.getElementById("hours").innerHTML = hourString;
+          document.getElementById("minutes").innerHTML = minuteString;
+          document.getElementById("seconds").innerHTML = secondString;
+          document.getElementById("milliseconds").innerHTML = millisecondString;
+
+          setTimeout(stopWatch, 10);
+        }
+      }
+    </script>
+  </body>
+</html>

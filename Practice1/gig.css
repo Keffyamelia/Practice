@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Comme', sans-serif;
+}
+
+
+.logistics {
+  background-image: /*linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),*/
+    url(../Images/gig.jpeg);
+
+  background-size: cover;
+  padding: 10px;
+  margin: 10px;
+}
+
+.logistics__heading {
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  font-size: 1400;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.logistics__heading--1 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 1500;
+  text-align: center;
+  display: block;
+  padding-bottom: 10px;
+  text-shadow: 0 25px 40px black;
+}
+
+.logistics__motto {
+    color: red;
+    text-align: center;
+}
+
+.logistics__signing {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}

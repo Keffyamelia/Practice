@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(
+      rgba(100, 200, 100, 0.8),
+      rgba(200, 100, 100, 0.8)
+    ),
+    url(contactpicture.jpg);
+  background-size: cover;
+}
+
+.contact {
+  width: 100%;
+  background-image: linear-gradient(
+    from left rgba(0, 215, 253, 0.8),
+    to right rgba(252, 0, 168, 0.8)
+  );
+}
